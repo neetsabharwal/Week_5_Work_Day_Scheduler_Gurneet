@@ -11,28 +11,29 @@ $(document).ready(function(){
     //declaring required variables
     let starthour = 8;
     let h12format = "";
-    let tasks = [];
+    let tasks;
 
     //Get saved tasks if any
-    if(localStorage.getItem('tasks') !== null){
+    if(localStorage.getItem('tasks') != null){
         tasks = JSON.parse(localStorage.getItem('tasks'));
     }else{
         tasks = [
-            {0:""},
-            {1:""},
-            {2:""},
-            {3:""},
-            {4:""},
-            {5:""},
-            {6:""},
-            {7:""},
-            {8:""},
-            {9:""}
-        ]        
+            {'8':""},
+            {'9':""},
+            {'10':""},
+            {'11':""},
+            {'12':""},
+            {'13':""},
+            {'14':""},
+            {'15':""},
+            {'16':""},
+            {'17':""}
+        ]     
+        localStorage.setItem('tasks',JSON.stringify(tasks));   
     }
 
     //Create task elements
-    for(i=0;i<=9;i++){
+    for(i=8;i<=17;i++){
         //Logic to form text for work times
         let displayhour = starthour;
         let h12format = "";
@@ -56,7 +57,7 @@ $(document).ready(function(){
         timeEl.addClass("col-2 hour p-2 d-flex justify-content-end");
         taskfield.addClass("col-9");
         taskfield.attr('key',i);
-        taskfield.val(tasks[i].i);
+        taskfield.val(tasks[i-8][i]);
         saveBtn.addClass("col-1 saveBtn fa fa-save");
         saveBtn.attr('key',i);
         divEl.append(timeEl);
@@ -78,5 +79,5 @@ $(document).ready(function(){
     }
 
     //Save button functionality
-
+    
 })
