@@ -38,4 +38,4 @@ https://neetsabharwal.github.io/Week_5_Work_Day_Scheduler_Gurneet/
 https://github.com/neetsabharwal/Week_5_Work_Day_Scheduler_Gurneet
 
 * Screenshot of the app:
-<img src="./Assets/images/05-third-party-apis-homework-demo.gif">
+<img src="./Assets/images/Day_task_scheduler.png">
