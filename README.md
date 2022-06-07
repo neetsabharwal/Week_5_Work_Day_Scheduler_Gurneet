@@ -31,9 +31,11 @@ THEN the saved events persist
 ## Review
 
 
-* The URL of the deployed application:
+* The URL of the deployed application: 
+https://neetsabharwal.github.io/Week_5_Work_Day_Scheduler_Gurneet/
 
 * The URL of the GitHub repository:
+https://github.com/neetsabharwal/Week_5_Work_Day_Scheduler_Gurneet
 
 * Screenshot of the app:
 <img src="./Assets/images/05-third-party-apis-homework-demo.gif">
