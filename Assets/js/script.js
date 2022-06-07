@@ -53,13 +53,13 @@ $(document).ready(function(){
         let taskfield = $('<input>');
         let saveBtn = $('<button>');
         divEl.addClass("row time-block");
-        divEl.attr('key',i);
+        divEl.attr('id',i);
         timeEl.addClass("col-2 hour p-2 d-flex justify-content-end");
         taskfield.addClass("col-9");
-        taskfield.attr('key',i);
+        taskfield.attr('id',i);
         taskfield.val(tasks[i-8][i]);
         saveBtn.addClass("col-1 saveBtn fa fa-save");
-        saveBtn.attr('key',i);
+        saveBtn.attr('id',i);
         divEl.append(timeEl);
         divEl.append(taskfield);
         divEl.append(saveBtn);
@@ -79,5 +79,11 @@ $(document).ready(function(){
     }
 
     //Save button functionality
-    
+    $(".saveBtn").click(function() {
+        const id = this.id;
+        var taskinput = $(`input[id=${id}]`);
+        var tasktext = taskinput.val();
+        tasks[id-8][id] = tasktext;
+        localStorage.setItem('tasks',JSON.stringify(tasks));
+    });
 })
