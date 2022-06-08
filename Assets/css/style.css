@@ -63,10 +63,10 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  font-size: 30px;
+  font-size: 16px;
 }
 
 .saveBtn:hover {
-  font-size: 50px;
+  font-size: 30px;
   transition: all .3s ease-in-out;
 }
