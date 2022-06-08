@@ -55,10 +55,10 @@ $(document).ready(function(){
         divEl.addClass("row time-block");
         divEl.attr('id',i);
         timeEl.addClass("col-2 hour p-2 d-flex justify-content-end");
-        taskfield.addClass("col-9");
+        taskfield.addClass("col-8");
         taskfield.attr('id',i);
         taskfield.val(tasks[i-8][i]);
-        saveBtn.addClass("col-1 saveBtn fa fa-save");
+        saveBtn.addClass("col-2 saveBtn fa fa-save");
         saveBtn.attr('id',i);
         divEl.append(timeEl);
         divEl.append(taskfield);
